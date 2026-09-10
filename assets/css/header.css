@@ -1,0 +1,583 @@
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.secao-1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  background: #d9ebd0;
+}
+
+.mercado {
+  position: absolute;
+  width: 110%;
+  height: auto;
+
+  left: 0;
+  top: 0px;
+
+  z-index: 1;
+}
+
+.Logo-Topo {
+  height: 180px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20dvh;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(163, 207, 159, 0.1) 45%,
+    rgba(163, 207, 159, 0.35) 75%,
+    rgba(163, 207, 159, 0.75) 100%
+  );
+
+  z-index: 2;
+}
+
+.circulo {
+  position: absolute;
+
+  width: 1800px;
+  height: 1100px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background-color: #a3cf9f;
+
+  top: -600px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 3;
+}
+
+.circulo::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../img/fundo-header.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 70%;
+
+  opacity: 45%;
+
+  z-index: 1;
+}
+
+.conteudo-header {
+  position: relative;
+  z-index: 4;
+}
+
+nav {
+  width: 85%;
+  height: 74px;
+
+  margin: 30px auto 0px auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background: rgba(211, 255, 207, 0.5);
+
+  border-radius: 40px;
+
+  padding: 0 45px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+nav a {
+  font-size: 20px;
+  font-family: "Yeseva One";
+
+  text-decoration: none;
+  color: #2e472d;
+  font-weight: bold;
+}
+
+nav h2 {
+  font-size: 40px;
+  color: #2e472d;
+}
+
+.texto {
+  width: 960px;
+
+  margin: 40px auto;
+
+  text-align: center;
+}
+
+.texto h1 {
+  font-size: 70px;
+  font-family: "Yeseva One";
+
+  color: #33602e;
+
+  margin-bottom: 20px;
+
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.texto p {
+  font-size: 24px;
+  font-family: "Parkinsans";
+
+  line-height: 1.6;
+
+  color: #042b00;
+}
+
+.historia {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #a3cf9f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+
+  padding: 100px 10%;
+}
+
+.historia-texto {
+  width: 700px;
+}
+
+.historia-texto h2 {
+  font-size: 55px;
+  font-family: "Yeseva One";
+
+  color: #33602e;
+
+  margin-bottom: 30px;
+}
+
+.historia-texto p {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+
+  line-height: 1.8;
+  color: #042b00;
+
+  margin-bottom: 20px;
+}
+
+.historia-img img {
+  width: 500px;
+  height: 620px;
+
+  object-fit: cover;
+
+  border-radius: 35px;
+}
+
+@media (max-width: 768px) {
+  .secao-1 {
+    height: 100svh;
+    min-height: 700px;
+  }
+
+  .mercado {
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+    max-width: none;
+
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .overlay {
+    height: 100%;
+  }
+
+  .circulo {
+    width: 1200px;
+    height: 1050px;
+
+    top: -430px;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .circulo::before {
+    background-size: 65%;
+    background-position: center bottom;
+  }
+
+  .conteudo-header {
+    width: 100%;
+  }
+
+  nav {
+    position: relative;
+
+    width: 92%;
+    height: 90px;
+
+    margin: 15px auto 0;
+
+    padding: 5px 20px;
+
+    border-radius: 45px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(211, 255, 207, 0.5);
+  }
+
+  .Logo-Topo {
+    height: 125px;
+    width: auto;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  .menu-hamburguer {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 20;
+  }
+
+  .menu-hamburguer span {
+    width: 30px;
+    height: 3px;
+
+    background: #2e472d;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+  }
+
+  nav ul {
+    position: absolute;
+
+    top: 82px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+
+    list-style: none;
+
+    background: rgba(211, 255, 207, 0.96);
+
+    border-radius: 25px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-15px);
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+
+    z-index: 15;
+  }
+
+  nav.menu-aberto ul {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+  nav ul li a {
+    font-size: 18px;
+
+    color: #2e472d;
+
+    text-decoration: none;
+  }
+
+  nav.menu-aberto .menu-hamburguer span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  nav.menu-aberto .menu-hamburguer span:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav.menu-aberto .menu-hamburguer span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .texto {
+    width: 90%;
+
+    margin: 45px auto 0;
+
+    text-align: center;
+  }
+
+  .texto h1 {
+    font-size: clamp(42px, 11vw, 60px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+  }
+
+  .texto p {
+    width: 100%;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+  }
+
+  .historia {
+    width: 100%;
+    min-height: auto;
+
+    padding: 70px 7%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 40px;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .historia-texto {
+    width: 100%;
+    max-width: 650px;
+
+    text-align: center;
+  }
+
+  .historia-texto h2 {
+    font-size: clamp(38px, 10vw, 52px);
+
+    margin-bottom: 22px;
+  }
+
+  .historia-texto p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    text-align: left;
+  }
+
+  .historia-img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .historia-img img {
+    width: 100%;
+    height: auto;
+
+    max-height: 600px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .secao-1 {
+    min-height: 720px;
+  }
+
+  .circulo {
+    width: 1050px;
+    height: 850px;
+
+    top: -350px;
+  }
+
+  .circulo::before {
+    background-size: 72%;
+  }
+
+  nav {
+    width: 94%;
+    height: 85px;
+
+    padding: 5px 15px;
+  }
+
+  .Logo-Topo {
+    height: 115px;
+  }
+
+  .menu-hamburguer {
+    width: 45px;
+    height: 45px;
+  }
+
+  .menu-hamburguer span {
+    width: 28px;
+    height: 3px;
+  }
+
+  nav ul {
+    top: 78px;
+
+    padding: 18px 0;
+
+    gap: 17px;
+
+    border-radius: 20px;
+  }
+
+  nav ul li a {
+    font-size: 17px;
+  }
+
+  .texto {
+    width: 88%;
+
+    margin-top: 42px;
+  }
+
+  .texto h1 {
+    font-size: 40px;
+
+    line-height: 1.08;
+  }
+
+  .texto p {
+    font-size: 15px;
+
+    line-height: 1.55;
+  }
+
+  .historia {
+    padding: 55px 6%;
+
+    gap: 30px;
+  }
+
+  .historia-texto h2 {
+    font-size: 38px;
+  }
+
+  .historia-texto p {
+    font-size: 16px;
+
+    line-height: 1.65;
+  }
+
+  .historia-img img {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .secao-1 {
+    min-height: 700px;
+  }
+
+  .circulo {
+    width: 950px;
+    height: 900px;
+
+    top: -330px;
+  }
+
+  .Logo-Topo {
+    height: 105px;
+  }
+
+  nav {
+    height: 78px;
+  }
+
+  nav ul {
+    top: 72px;
+  }
+
+  .texto {
+    margin-top: 35px;
+  }
+
+  .texto h1 {
+    font-size: 36px;
+  }
+
+  .texto p {
+    font-size: 14px;
+  }
+
+  .historia-texto h2 {
+    font-size: 34px;
+  }
+
+  .historia-texto p {
+    font-size: 15px;
+  }
+}
