@@ -251,7 +251,7 @@ ESPAÇO PARA O FOOTER
 
 footer {
   width: 100%;
-  background: url("../img/Background-footer.svg") center center / cover
+  background: url("../img/Background-footer.webp") center center / cover
     no-repeat;
   padding: 45px 0;
 }
